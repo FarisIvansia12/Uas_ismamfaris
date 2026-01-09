@@ -881,6 +881,27 @@ tbody tr:hover {
   justify-content: space-between;
   padding: 10px;
 }
+/* Judul */
+.profil h1,
+.profil h2,
+.transaksi h1,
+.transaksi h2 {
+    color: #1e293b !important; /* biru gelap elegan */
+}
+
+/* Paragraf */
+.profil p,
+.transaksi p,
+.transaksi label {
+    color: #334155 !important; /* abu gelap, nyaman */
+}
+
+/* Isi tabel transaksi */
+.styled-table td,
+.styled-table th {
+    color: #1f2937 !important;
+}
+
 
 
 
