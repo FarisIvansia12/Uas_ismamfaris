@@ -881,18 +881,20 @@ tbody tr:hover {
   justify-content: space-between;
   padding: 10px;
 }
+
 /* FIX ISI TEKS GLOBAL */
 p,
 span,
 li,
 label {
-    color: #1f2937; /* gelap, enak dibaca */
+    color: #1f2937;
 }
 
 /* FIX ISI TABEL TRANSAKSI */
 table td {
     color: #1f2937;
 }
+
 
 
 
