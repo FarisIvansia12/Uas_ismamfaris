@@ -881,32 +881,17 @@ tbody tr:hover {
   justify-content: space-between;
   padding: 10px;
 }
-/* ============================= */
-/* FIX WARNA ISI TEKS (KONTEN)   */
-/* ============================= */
-
-/* PROFIL - isi teks */
-.profil p,
-.profil li,
-.profil .content,
-.profil .profile-content {
-    color: #334155 !important; /* abu gelap nyaman */
+/* FIX ISI TEKS GLOBAL */
+p,
+span,
+li,
+label {
+    color: #1f2937; /* gelap, enak dibaca */
 }
 
-/* FITUR (card fitur di beranda / profil) */
-.feature-card p,
-.feature-card h3 {
-    color: #1f2937 !important;
-}
-
-/* TRANSAKSI - isi tabel */
-.styled-table tbody td {
-    color: #1f2937 !important;
-}
-
-/* Header tabel biar lebih tegas */
-.styled-table thead th {
-    color: #0f172a !important;
+/* FIX ISI TABEL TRANSAKSI */
+table td {
+    color: #1f2937;
 }
 
 
