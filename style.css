@@ -881,15 +881,7 @@ tbody tr:hover {
   justify-content: space-between;
   padding: 10px;
 }
-.profil-detail p,
-.profil-detail li {
-    color: #1f2937; /* gelap, jelas, profesional */
-}
 
-/* FIX ISI TABEL TRANSAKSI */
-table td {
-    color: #1f2937;
-}
 
 
 
