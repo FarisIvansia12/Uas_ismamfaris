@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil | Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header ">
+    <div class="navbar">
+        <div class="brand">
+            <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="logo">
+            <span>Perpustakaan Digital</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="profil.html">Profil</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+<div class="profil-wrapper">
+    <div class="profil-card">
+
+        <!-- HEADER PROFIL -->
+        <div class="profil-header">
+            <h2>Profil Aplikasi</h2>
+            <p>Informasi lengkap tentang aplikasi perpustakaan</p>
+        </div>
+
+        <div class="profil-content">
+            <!-- MENU PROFIL -->
+            <div class="profil-menu">
+                <button class="menu-btn active" onclick="showContent('tentang')">📘 Tentang</button>
+                <button class="menu-btn" onclick="showContent('fitur')">⚙️ Fitur</button>
+                <button class="menu-btn" onclick="showContent('developer')">👤 Pengembang</button>
+            </div>
+
+            <!-- ISI PROFIL -->
+            <div class="profil-detail">
+                <div id="tentang" class="profil-section active">
+                    <h3>Tentang Aplikasi</h3>
+                    <p>
+                        Aplikasi Perpustakaan Digital merupakan aplikasi berbasis web
+                        yang dirancang untuk mempermudah pencatatan dan pengelolaan
+                        transaksi peminjaman buku secara modern, efisien, dan terstruktur.
+                    </p>
+                </div>
+
+                <div id="fitur" class="profil-section">
+                    <h3>Fitur Aplikasi</h3>
+                    <ul>
+                        <li>📋 Form transaksi peminjaman buku</li>
+                        <li>📊 Tabel daftar transaksi interaktif</li>
+                        <li>🧠 Validasi input menggunakan JavaScript</li>
+                        <li>📱 Tampilan responsif</li>
+                        <li>🎨 Desain modern dan user-friendly</li>
+                    </ul>
+                </div>
+
+                <div id="developer" class="profil-section">
+                    <h3>Tentang Pengembang</h3>
+                    <p>
+                        Aplikasi ini dikembangkan sebagai bagian dari tugas
+                        Ujian Akhir Semester mata kuliah Pemrograman Web 1.
+                    </p>
+                    <p>
+                        Tujuan pengembangan aplikasi ini adalah untuk
+                        menerapkan konsep HTML, CSS, dan JavaScript
+                        dalam membangun aplikasi web yang menarik
+                        dan mudah digunakan.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+function showContent(id) {
+    const sections = document.querySelectorAll('.profil-section');
+    const buttons = document.querySelectorAll('.menu-btn');
+
+    sections.forEach(sec => sec.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+});
+</script>
+
+</body>
+</html>

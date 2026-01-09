@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Beranda | Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="navbar">
+        <div class="brand">
+            <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="logo">
+            <span>Perpustakaan Digital</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="profil.html">Profil</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Aplikasi Perpustakaan Digital</h1>
+        <p>
+            Kelola transaksi peminjaman buku dengan mudah,
+            cepat, dan terstruktur dalam satu aplikasi modern.
+        </p>
+        <div class="hero-btn">
+            <a href="transaksi.html" class="btn-primary">Mulai Transaksi</a>
+            <a href="login.html" class="btn-secondary">Login</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- FITUR -->
+<section class="features">
+    <h2 class="reveal">Kenapa Memilih Aplikasi Ini?</h2>
+
+    <div class="feature-list">
+        <div class="feature-card reveal">
+            <span>📚</span>
+            <h3>Mudah Digunakan</h3>
+            <p>Antarmuka sederhana dan ramah pengguna.</p>
+        </div>
+
+        <div class="feature-card reveal">
+            <span>⚡</span>
+            <h3>Cepat & Efisien</h3>
+            <p>Proses transaksi tanpa ribet dan hemat waktu.</p>
+        </div>
+
+        <div class="feature-card reveal">
+            <span>📊</span>
+            <h3>Tertata Rapi</h3>
+            <p>Data transaksi ditampilkan dalam tabel yang jelas.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- LANGKAH -->
+<section class="steps">
+    <h2 class="reveal">Cara Menggunakan Aplikasi</h2>
+
+    <div class="step-list">
+        <div class="step-card reveal">
+            <div class="step-number">1</div>
+            <p>Login ke dalam sistem</p>
+        </div>
+
+        <div class="step-card reveal">
+            <div class="step-number">2</div>
+            <p>Isi form transaksi peminjaman</p>
+        </div>
+
+        <div class="step-card reveal">
+            <div class="step-number">3</div>
+            <p>Simpan dan lihat daftar transaksi</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+    <div class="cta-box reveal active">
+        <h2>Siap Mengelola Perpustakaan Anda?</h2>
+        <p>Gunakan aplikasi ini untuk pengalaman pengelolaan yang lebih modern.</p>
+        <a href="transaksi.html" class="btn-primary cta-btn">Coba Sekarang</a>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("active");
+                }, index * 150);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    reveals.forEach(el => observer.observe(el));
+});
+</script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+});
+</script>
+
+
+
+</body>
+</html>

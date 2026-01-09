@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaksi | Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="navbar">
+        <div class="brand">
+            <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="logo">
+            <span>Perpustakaan Digital</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="profil.html">Profil</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </div>
+</header>
+
+
+
+<div class="transaksi-wrapper">
+    <!-- FORM TRANSAKSI -->
+    <div class="transaksi-card">
+        <h2>Form Transaksi</h2>
+        <p class="subtitle">Input data transaksi peminjaman buku</p>
+
+        <form id="formTransaksi" onsubmit="return validasiTransaksi()">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nama Transaksi</label>
+                    <input type="text" id="nama" placeholder="Contoh: Peminjaman Buku">
+                </div>
+
+                <div class="form-group">
+                    <label>Jumlah</label>
+                    <input type="number" id="jumlah" placeholder="Contoh: 2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Kategori</label>
+                <input type="text" id="kategori" placeholder="Contoh: Fiksi / Non Fiksi">
+            </div>
+
+            <button type="submit" class="btn-primary-small">Simpan Transaksi</button>
+            <p id="error" class="error"></p>
+        </form>
+    </div>
+
+    <!-- DAFTAR TRANSAKSI -->
+   <div class="table-wrapper table-spacer">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>📄 Nama Transaksi</th>
+                <th>📦 Jumlah</th>
+                <th>🏷️ Kategori</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="icon-text">📘</span>
+                    Peminjaman Buku
+                </td>
+                <td>
+                    <span class="badge badge-blue">2</span>
+                </td>
+                <td>
+                    <span class="badge badge-green">Fiksi</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="icon-text">📰</span>
+                    Peminjaman Majalah
+                </td>
+                <td>
+                    <span class="badge badge-blue">1</span>
+                </td>
+                <td>
+                    <span class="badge badge-purple">Non Fiksi</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="script.js"></script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+});
+</script>
+
+</body>
+</html>
